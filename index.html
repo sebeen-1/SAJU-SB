@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>적월당 | 나의 사주를 읽다</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{--black:#080707;--panel:#15100f;--gold:#d6af78;--muted:#aaa09a;--border:#504038;--red:#a42723;--cream:#f5e8da}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--cream);font-family:'Noto Sans KR',sans-serif}body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 10%,#5b13121c,transparent 65%);z-index:-1}.layout{max-width:1260px;margin:auto;min-height:100vh;display:grid;grid-template-columns:minmax(0,1fr) minmax(370px,480px);align-items:center;gap:35px;padding:38px 44px}.art{position:relative;min-height:750px;display:flex;align-items:center;justify-content:center}.art img{width:100%;max-width:775px;max-height:850px;object-fit:contain;filter:drop-shadow(0 15px 50px #8706003d)}.art:after{content:"";position:absolute;inset:auto 0 0;height:100px;background:linear-gradient(transparent,var(--black));pointer-events:none}.seal{position:absolute;top:10px;left:0;writing-mode:vertical-rl;font-family:'Noto Serif KR',serif;color:var(--gold);letter-spacing:8px;font-size:13px}.panel{padding:20px 0;position:relative;z-index:1}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:4px;font-weight:700}.brand{font-family:'Noto Serif KR',serif;font-size:58px;font-weight:800;letter-spacing:9px;margin:15px 0 2px}.subtitle{color:#d9b08e;font-family:'Noto Serif KR',serif;letter-spacing:2px;font-size:18px}.description{margin:24px 0 32px;color:#c2b4ad;font-size:13px;line-height:1.9}.line{width:65px;height:1px;background:var(--gold);margin:23px 0}.formBox{background:#1a1312c9;border:1px solid #533b33;padding:28px;border-radius:3px;box-shadow:0 20px 70px #0007}.formTitle{font-family:'Noto Serif KR',serif;font-size:20px;margin:0 0 20px}.field{margin:0 0 16px}.field label,.miniLabel{display:block;color:#dfc9b4;font-size:12px;margin-bottom:8px}.field input,.field select{width:100%;height:46px;border:1px solid #57443c;background:#100d0c;color:#f8e9da;outline:none;padding:0 13px;border-radius:2px;font-family:inherit;font-size:14px;color-scheme:dark}.field input:focus,.field select:focus{border-color:var(--gold)}.switch{display:flex;gap:8px;margin-bottom:18px}.switch label{flex:1;cursor:pointer}.switch input{position:absolute;opacity:0}.switch span{display:block;text-align:center;padding:11px;border:1px solid #65463a;color:#b7aaa0;font-size:13px}.switch input:checked+span{background:#792521;border-color:#a44f42;color:#fff}.dates{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:9px}.times{display:grid;grid-template-columns:1fr 1fr;gap:10px}.checks{display:flex;gap:20px;flex-wrap:wrap;margin:12px 0 19px}.checks label{color:#d3beb0;font-size:12px;display:flex;gap:8px;align-items:center;cursor:pointer}.checks input{accent-color:#9a312a}.primary{background:linear-gradient(100deg,#8d2422,#bb4135);color:white;font-family:'Noto Serif KR',serif;font-size:17px;font-weight:700;letter-spacing:2px;border:none;width:100%;height:56px;cursor:pointer;margin-top:9px}.primary:hover{filter:brightness(1.17)}.hint{font-size:11px;line-height:1.7;color:#91847e;margin:14px 0 0}.error{font-size:12px;color:#ffb2a6;line-height:1.7;margin:10px 0;min-height:0}.results{max-width:1050px;margin:0 auto 90px;padding:0 30px;display:none}.results.show{display:block}.resultHead{text-align:center;border-top:1px solid #604133;padding-top:35px}.resultHead h2{font-family:'Noto Serif KR',serif;font-size:30px;margin:10px 0}.resultHead p{color:#c1aaa0;font-size:13px;line-height:1.8}.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:30px 0}.pillar{text-align:center;background:#1a1211;border:1px solid #594035;padding:22px 5px 20px}.pillar small{font-size:12px;color:#bca79b}.hanja{font-family:'Noto Serif KR',serif;font-size:42px;color:#f0c995;margin:13px 0 5px}.hangul{font-size:15px;color:#f2e4d8}.day{border-color:#c48c5a;background:#281817}.analysisGrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.infoCard{padding:26px;border:1px solid #50372e;background:#171110}.infoCard h3{font-family:'Noto Serif KR',serif;margin:0 0 15px;color:#eaca9e}.element{display:grid;grid-template-columns:38px 1fr 29px;align-items:center;gap:10px;margin:10px 0;font-size:13px}.bar{height:9px;background:#332a28}.bar span{display:block;height:100%;background:linear-gradient(90deg,#8b3830,#e7ac76)}.infoCard p{font-size:13px;line-height:2;color:#cdbdb3;margin:0}.meta{font-size:12px;color:#baada3;margin-top:20px;line-height:1.8}.footer{text-align:center;margin:36px auto;color:#7b6c64;font-size:11px;line-height:1.9}@media(max-width:930px){.layout{grid-template-columns:1fr;padding:0 22px 30px;gap:0}.art{min-height:0;height:360px;overflow:hidden}.art img{max-height:600px;object-position:center 36%;transform:translateY(65px)}.seal{top:25px;left:8px}.panel{max-width:550px;width:100%;margin:auto}.brand{font-size:43px}.description{margin:16px 0 25px}.formBox{padding:20px}.analysisGrid{grid-template-columns:1fr}.results{padding:0 22px}.pillars{gap:7px}.hanja{font-size:32px}.pillar{padding:15px 2px}}
+
+.compatIntro{max-width:1050px;margin:4px auto 85px;padding:0 30px}.compatBox{border:1px solid #644536;background:linear-gradient(145deg,#231411,#110c0b);padding:30px}.compatBox h2{font:700 26px 'Noto Serif KR',serif;color:#eaca9e;margin:7px 0 12px}.compatBox p{font-size:13px;color:#cbb8ae;line-height:1.9}.compatAction{margin-top:15px}.compatResult{display:none;margin-top:23px;padding:22px;background:#100c0c;border:1px solid #70503e}.compatResult.show{display:block}.score{font:800 65px 'Noto Serif KR',serif;color:#f0c995;margin:10px 0 0}.score small{font:400 16px 'Noto Sans KR',sans-serif}.compatColumns{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}.compatMini{padding:16px;background:#211613;border:1px solid #50372e;font-size:13px;line-height:1.9}.compatMini strong{color:#e9c18e}.compatNotes{font-size:13px;line-height:2;color:#d6c5b9}.compatDisclaimer{color:#a99788;font-size:11px;line-height:1.8;margin-top:20px}@media(max-width:700px){.compatIntro{padding:0 22px}.compatBox{padding:20px}.compatColumns{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="layout">
+<section class="art" aria-label="붉은 가면 무사 이미지"><span class="seal">命運之門 · 四柱八字</span><img src="warrior.png" alt="붉은 의상과 푸른 가면을 쓴 신비로운 무사" /></section>
+<section class="panel"><div class="eyebrow">THE FOUR PILLARS OF DESTINY</div><h1 class="brand">赤月堂</h1><div class="subtitle">적월당 · 운명의 결을 읽다</div><div class="line"></div><p class="description">태어난 순간, 하늘과 땅이 남긴 여덟 글자.<br>나의 사주팔자와 오행의 흐름을 살펴보세요.</p>
+<form id="sajuForm" class="formBox"><h2 class="formTitle">사주 정보 입력</h2>
+<div class="field"><label for="name">이름</label><input id="name" type="text" placeholder="이름을 입력하세요" maxlength="30" required autocomplete="name" /></div>
+<div class="miniLabel">생일 구분</div><div class="switch"><label><input type="radio" name="calendar" value="solar" checked /><span>양력</span></label><label><input type="radio" name="calendar" value="lunar" /><span>음력</span></label></div>
+<div class="field"><label>생년월일</label><div class="dates"><input id="year" type="number" min="1900" max="2100" placeholder="년도 (예: 1998)" required /><select id="month" aria-label="태어난 월" required></select><select id="date" aria-label="태어난 일" required></select></div></div>
+<div class="checks"><label id="leapWrap" style="display:none"><input id="leap" type="checkbox" /> 음력 윤달</label><label><input id="unknown" type="checkbox" /> 태어난 시간 모름</label></div>
+<div class="field" id="birthTime"><label>태어난 시간 (한국 표준시 기준)</label><div class="times"><select id="hour" aria-label="태어난 시"></select><select id="minute" aria-label="태어난 분"></select></div></div>
+<button class="primary" type="submit">나의 사주 확인하기　→</button><div class="error" id="error" role="alert"></div><p class="hint">입력 정보는 이 사이트의 서버에 저장되지 않습니다. 공유 링크를 생성할 경우 이름과 사주 기둥 정보가 URL에 포함됩니다. 사주 계산에는 외부 만세력 라이브러리를 불러오므로 최초 실행 시 인터넷 연결이 필요합니다.</p></form>
+</section></main>
+<section class="results" id="results" aria-live="polite"><div class="resultHead"><div class="eyebrow">YOUR SAJU CHART</div><h2 id="resultName"></h2><p id="resultDate"></p></div><div class="pillars" id="pillars"></div><div class="analysisGrid"><article class="infoCard"><h3>오행 분포 · 五行</h3><div id="elements"></div><div class="meta">천간과 지지의 표면 글자 8개(시간을 모르면 6개)를 기준으로 계산하며, 지장간·월령에 따른 강약은 반영하지 않습니다.</div></article><article class="infoCard"><h3>나의 일간 · 日干</h3><p id="reading"></p></article></div><p class="footer">절기 기준 년주·월주 / 자시 기준 및 지역별 진태양시 보정 등은 유파에 따라 달라질 수 있습니다.<br>해석은 전통 명리학에 기반한 참고 콘텐츠이며 과학적으로 검증된 성격·미래 예측이 아닙니다.</p></section>
+<section class="compatIntro" id="compatSection"><div class="compatBox"><div class="eyebrow">FATE & CONNECTION</div><h2 id="compatHeading">나만의 사주 궁합 링크 만들기</h2><p id="compatGuide">먼저 위에서 내 사주 정보를 입력하고, 개인 궁합 링크를 만드세요. 친구가 그 링크로 접속하면 자신의 사주를 입력해 나와의 궁합 점수를 확인할 수 있습니다.</p><p id="referenceInfo">기준 상대: 아직 정해지지 않았습니다.</p><button type="button" class="primary compatAction" id="shareBtn">내 궁합 링크 만들기　→</button><div class="field" id="shareArea" style="display:none;margin-top:20px"><label for="shareLink">친구에게 보낼 링크</label><input type="text" id="shareLink" readonly aria-label="궁합 공유 링크"/><button type="button" class="primary" id="copyBtn">링크 복사하기</button></div><button type="button" class="primary compatAction" id="compatBtn" style="display:none">궁합 결과 보기　→</button><button type="button" id="newLinkBtn" style="display:none;margin-top:14px;background:none;color:#ebc89b;border:1px solid #715243;padding:12px;cursor:pointer;width:100%">내 링크 새로 만들기</button><p class="error" id="compatError" role="alert"></p><div class="compatResult" id="compatResult" aria-live="polite"><div class="eyebrow">SAJU COMPATIBILITY</div><div class="score" id="compatScore"></div><p id="compatSummary"></p><div class="compatColumns"><div class="compatMini" id="meCompat"></div><div class="compatMini" id="targetCompat"></div></div><div class="compatNotes" id="compatDetails"></div><p class="compatDisclaimer">점수는 사주 기호를 활용해 이 사이트가 만든 오락용 지표로 관계의 성공을 예측하지 않습니다. 공유 URL에는 이름과 사주 기둥 정보가 포함됩니다. 링크를 가진 누구나 이를 확인할 수 있으니 공유에 동의할 때만 이용하세요. 이 데모는 계정이나 서버에 정보를 저장하지 않습니다.</p></div></div></section>
+<footer class="footer">© 赤月堂 · SAJU EXPERIENCE</footer>
+<script src="https://cdn.jsdelivr.net/npm/lunar-javascript@1.7.7/lunar.min.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+let visitorChart=null;
+let sharedChart=null;
+
+const selectFill=(id,start,end,suffix)=>{for(let i=start;i<=end;i++){let o=document.createElement('option');o.value=i;o.textContent=String(i).padStart(2,'0')+suffix;$(id).appendChild(o)}};
+selectFill('month',1,12,'월'); selectFill('date',1,31,'일');selectFill('hour',0,23,'시');selectFill('minute',0,59,'분');
+$('year').value=1998;$('month').value=9;$('date').value=18;$('hour').value=19;$('minute').value=30;
+document.querySelectorAll('[name=calendar]').forEach(el=>el.addEventListener('change',()=>{$('leapWrap').style.display=document.querySelector('[name=calendar]:checked').value==='lunar'?'flex':'none'}));
+$('unknown').addEventListener('change',e=>{$('birthTime').style.opacity=e.target.checked?'.4':'1';$('hour').disabled=e.target.checked;$('minute').disabled=e.target.checked});
+const stems='甲乙丙丁戊己庚辛壬癸',branches='子丑寅卯辰巳午未申酉戌亥';
+const korStem=['갑','을','병','정','무','기','경','신','임','계'],korBranch=['자','축','인','묘','진','사','오','미','신','유','술','해'];
+const elemNames=['목','화','토','금','수'];const stemElem=[0,0,1,1,2,2,3,3,4,4],branchElem=[4,2,0,0,2,1,1,2,3,3,2,4];
+const stemDesc=['갑목(甲木)은 곧게 자라나는 큰 나무에 비유됩니다. 전통 명리학에서는 추진력과 성장 의지의 상징으로 봅니다.','을목(乙木)은 유연한 풀과 덩굴에 비유됩니다. 변화에 적응하는 힘과 섬세함을 상징합니다.','병화(丙火)는 밝게 비추는 태양에 비유됩니다. 드러나는 에너지와 활력을 상징합니다.','정화(丁火)는 정교하게 타오르는 촛불에 비유됩니다. 집중력과 따뜻함을 상징합니다.','무토(戊土)는 넓고 큰 산에 비유됩니다. 중심과 안정감을 상징합니다.','기토(己土)는 식물을 기르는 흙에 비유됩니다. 포용력과 실용성을 상징합니다.','경금(庚金)은 단단한 쇠에 비유됩니다. 결단력과 원칙을 상징합니다.','신금(辛金)은 다듬어진 보석에 비유됩니다. 정교함과 미감을 상징합니다.','임수(壬水)는 드넓은 바다에 비유됩니다. 깊이와 유연한 사고를 상징합니다.','계수(癸水)는 이슬과 빗물에 비유됩니다. 관찰력과 세심함을 상징합니다.'];
+function nativeValid(y,m,d){const date=new Date(y,m-1,d);return date.getFullYear()===y&&date.getMonth()===m-1&&date.getDate()===d}
+function pill(han,kor,label,highlight){return `<div class="pillar ${highlight?'day':''}"><small>${label}</small><div class="hanja">${han.slice(0,1)}<br>${han.slice(1)}</div><div class="hangul">${kor}</div></div>`}
+function korOf(gz){return korStem[stems.indexOf(gz[0])]+korBranch[branches.indexOf(gz[1])]} 
+$('sajuForm').addEventListener('submit',e=>{
+e.preventDefault();$('error').textContent='';
+try{
+ if(typeof Solar==='undefined'||typeof Lunar==='undefined') throw Error('만세력 라이브러리를 불러오지 못했습니다. 인터넷 연결을 확인하고 새로고침해 주세요.');
+ let name=$('name').value.trim();if(!name)throw Error('이름을 입력해 주세요.');
+ let y=Number($('year').value),m=Number($('month').value),d=Number($('date').value),h=Number($('hour').value),mi=Number($('minute').value),unknown=$('unknown').checked;
+ if(!Number.isInteger(y)||y<1900||y>2100)throw Error('생년은 1900년부터 2100년 사이로 입력해 주세요.');
+ let lunar,solar,kind=document.querySelector('[name=calendar]:checked').value;
+ if(kind==='solar'){
+  if(!nativeValid(y,m,d))throw Error('올바른 양력 날짜를 입력해 주세요.');
+  solar=Solar.fromYmdHms(y,m,d,unknown?12:h,unknown?0:mi,0);lunar=solar.getLunar();
+ }else{
+  let lm=$('leap').checked?-m:m;
+  lunar=Lunar.fromYmdHms(y,lm,d,unknown?12:h,unknown?0:mi,0);solar=lunar.getSolar();
+  if(lunar.getYear()!==y||lunar.getMonth()!==lm||lunar.getDay()!==d)throw Error('존재하지 않는 음력 날짜 또는 윤달입니다.');
+ }
+ const eight=lunar.getEightChar();const gz=[eight.getYear(),eight.getMonth(),eight.getDay(),unknown?'':eight.getTime()];
+ visitorChart={name,gz,unknown};$('compatResult').classList.remove('show');$('compatError').textContent='';
+ if(gz.slice(0,3).some(x=>!x||x.length!==2))throw Error('사주 계산 중 문제가 발생했습니다.');
+ $('resultName').textContent=name+'님의 사주팔자';
+ $('resultDate').textContent=`양력 ${solar.getYear()}년 ${solar.getMonth()}월 ${solar.getDay()}일${unknown?' · 태어난 시간 미상':` ${String(h).padStart(2,'0')}:${String(mi).padStart(2,'0')}`} · ${kind==='lunar'?'음력 입력':'양력 입력'}`;
+ $('pillars').innerHTML=pill(unknown?'--':gz[3],unknown?'미상':korOf(gz[3]),'시주 · 時柱',false)+pill(gz[2],korOf(gz[2]),'일주 · 日柱',true)+pill(gz[1],korOf(gz[1]),'월주 · 月柱',false)+pill(gz[0],korOf(gz[0]),'년주 · 年柱',false);
+ let counts=[0,0,0,0,0];gz.filter(Boolean).forEach(x=>{let si=stems.indexOf(x[0]),bi=branches.indexOf(x[1]);if(si>=0)counts[stemElem[si]]++;if(bi>=0)counts[branchElem[bi]]++});
+ let max=Math.max(...counts,1);$('elements').innerHTML=counts.map((v,i)=>`<div class="element"><span>${elemNames[i]} · ${'木火土金水'[i]}</span><div class="bar"><span style="width:${v/max*100}%"></span></div><strong>${v}</strong></div>`).join('');
+ let idx=stems.indexOf(gz[2][0]);$('reading').textContent=stemDesc[idx]+'\n\n일간은 태어난 날의 천간으로, 전통 사주 해석에서 자신을 나타내는 중심 글자입니다. 다만 이 설명만으로 성격이나 운명을 단정할 수는 없습니다.';$('reading').style.whiteSpace='pre-line';
+ $('results').classList.add('show');$('results').scrollIntoView({behavior:'smooth',block:'start'});
+ }catch(err){$('error').textContent=err.message||'계산할 수 없습니다. 입력값을 확인해 주세요.'}
+});
+
+function encodeShare(chart){
+ const payload=JSON.stringify({v:1,n:chart.name,g:chart.gz,u:chart.unknown});
+ const bytes=new TextEncoder().encode(payload);
+ let binary='';bytes.forEach(byte=>binary+=String.fromCharCode(byte));
+ return btoa(binary).replaceAll('+','-').replaceAll('/','_').replace(/=+$/,'');
+}
+function decodeShare(encoded){
+ if(!encoded || encoded.length>1500)throw Error('공유 링크가 올바르지 않습니다.');
+ const binary=atob(encoded.replaceAll('-','+').replaceAll('_','/'));
+ const data=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(Uint8Array.from(binary,c=>c.charCodeAt(0))));
+ if(data.v!==1||typeof data.n!=='string'||!data.n.trim()||data.n.length>30||!Array.isArray(data.g)||data.g.length!==4||typeof data.u!=='boolean')throw Error('공유 링크 데이터가 올바르지 않습니다.');
+ for(let i=0;i<4;i++){
+  if(data.u&&i===3&&data.g[i]==='')continue;
+  if(typeof data.g[i]!=='string'||data.g[i].length!==2||!stems.includes(data.g[i][0])||!branches.includes(data.g[i][1]))throw Error('공유 사주 정보가 올바르지 않습니다.');
+ }
+ return {name:data.n,gz:data.g,unknown:data.u};
+}
+function readShared(){
+ const match=location.hash.match(/^#match=([A-Za-z0-9_-]+)$/);
+ if(!match)return;
+ try{
+  sharedChart=decodeShare(match[1]);
+  $('compatHeading').textContent=sharedChart.name+'님과의 사주 궁합';
+  $('compatGuide').textContent=sharedChart.name+'님이 보낸 궁합 링크입니다. 위에서 내 생년월일과 태어난 시간을 입력하고 궁합 결과를 확인하세요.';
+  $('referenceInfo').textContent='공유한 사람: '+sharedChart.name+' · 일주 '+sharedChart.gz[2];
+  $('shareBtn').style.display='none';$('compatBtn').style.display='block';$('newLinkBtn').style.display='block';
+ }catch(err){$('compatError').textContent=err.message||'링크를 열 수 없습니다.'}
+}
+$('shareBtn').addEventListener('click',()=>{
+ $('compatError').textContent='';
+ if(!visitorChart){$('compatError').textContent='먼저 위에서 내 사주를 계산해 주세요.';return}
+ const link=location.href.split('#')[0]+'#match='+encodeShare(visitorChart);
+ $('shareLink').value=link;$('shareArea').style.display='block';
+});
+$('copyBtn').addEventListener('click',async()=>{
+ const link=$('shareLink').value;
+ try{await navigator.clipboard.writeText(link);$('copyBtn').textContent='복사 완료!'}
+ catch(e){$('shareLink').focus();$('shareLink').select();$('compatError').textContent='자동 복사가 막혀 있어요. 선택된 링크를 직접 복사해 주세요.'}
+});
+$('newLinkBtn').addEventListener('click',()=>{history.replaceState(null,'',location.pathname+location.search);sharedChart=null;$('compatHeading').textContent='나만의 사주 궁합 링크 만들기';$('compatGuide').textContent='내 정보를 입력하고 친구에게 보낼 링크를 만드세요.';$('referenceInfo').textContent='기준 상대: 아직 정해지지 않았습니다.';$('shareBtn').style.display='block';$('compatBtn').style.display='none';$('newLinkBtn').style.display='none';$('compatResult').classList.remove('show')});
+window.addEventListener('hashchange',()=>location.reload());
+function escapeHtml(s){return s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('\"','&quot;')}
+function stemElement(stem){return stemElem[stems.indexOf(stem)]}
+function elementRelation(a,b){
+ if(a===b)return {points:13,text:'같은 오행으로 공감대를 형성하기 쉬운 조합으로 해석합니다.'};
+ if((a+1)%5===b)return {points:22,text:'나의 일간 오행이 상대의 일간 오행을 생(生)하는 관계입니다.'};
+ if((b+1)%5===a)return {points:22,text:'상대의 일간 오행이 나의 일간 오행을 생(生)하는 관계입니다.'};
+ if((a+2)%5===b||(b+2)%5===a)return {points:5,text:'일간 오행 사이에 극(剋)의 관계가 있어 차이를 조율하는 상징으로 봅니다.'};
+ return {points:10,text:'일간 오행의 관계를 참고해 서로 다른 특성을 살펴볼 수 있습니다.'};
+}
+function compatibility(a,b){
+ const as=stems.indexOf(a.gz[2][0]),bs=stems.indexOf(b.gz[2][0]);
+ const ab=branches.indexOf(a.gz[2][1]),bb=branches.indexOf(b.gz[2][1]);
+ if(as<0||bs<0||ab<0||bb<0)throw Error('사주 데이터가 올바르지 않습니다.');
+ // 총점 100: 기본 45 + 오행(5~22) + 천간(0~15) + 지지(0~15) + 연주/월주(0~3)
+ const er=elementRelation(stemElem[as],stemElem[bs]);
+ const stemHap=[[0,5],[1,6],[2,7],[3,8],[4,9]].some(([x,y])=>(as===x&&bs===y)||(as===y&&bs===x));
+ const stemPoint=stemHap?15:as===bs?10:(as%2===bs%2?7:4);
+ const sixHap=[[0,1],[2,11],[3,10],[4,9],[5,8],[6,7]].some(([x,y])=>(ab===x&&bb===y)||(ab===y&&bb===x));
+ const sixChung=[[0,6],[1,7],[2,8],[3,9],[4,10],[5,11]].some(([x,y])=>(ab===x&&bb===y)||(ab===y&&bb===x));
+ const branchPoint=sixHap?15:sixChung?0:ab===bb?10:7;
+ const extras=(a.gz[0][0]===b.gz[0][0]?1:0)+(a.gz[1][0]===b.gz[1][0]?2:0);
+ const score=Math.max(0,Math.min(100,45+er.points+stemPoint+branchPoint+extras));
+ return {score,er,stemHap,sixHap,sixChung};
+}
+$('compatBtn').addEventListener('click',()=>{
+ $('compatError').textContent='';
+ try{
+  if(!visitorChart)throw Error('먼저 위에서 본인의 정보를 입력하고 사주 확인하기를 눌러 주세요.');
+  if(typeof Solar==='undefined')throw Error('만세력 라이브러리를 불러오지 못했습니다.');
+  if(!sharedChart)throw Error('공유된 궁합 링크로 접속해 주세요.');
+  const target=sharedChart,result=compatibility(visitorChart,target);
+  $('compatScore').innerHTML=`${result.score}<small> / 100점</small>`;
+  $('compatSummary').textContent=`${visitorChart.name}님과 ${target.name}님의 사주를 비교한 상징적 궁합 점수입니다.`;
+  $('meCompat').innerHTML=`<strong>나 · ${escapeHtml(visitorChart.name)}</strong><br>일주: ${visitorChart.gz[2]} (${korOf(visitorChart.gz[2])})<br>일간 오행: ${elemNames[stemElement(visitorChart.gz[2][0])]}`;
+  $('targetCompat').innerHTML=`<strong>상대 · ${escapeHtml(target.name)}</strong><br>일주: ${target.gz[2]} (${korOf(target.gz[2])})<br>일간 오행: ${elemNames[stemElement(target.gz[2][0])]}`;
+  const heavenly=result.stemHap?'두 사람의 일간 천간에는 합(合)으로 보는 관계가 있습니다.':'일간 천간의 합(合)은 없지만, 관계의 좋고 나쁨을 이것만으로 판단할 수는 없습니다.';
+  const earthly=result.sixHap?'일지에는 육합(六合)의 상징이 나타납니다.':result.sixChung?'일지에는 충(沖)의 상징이 나타납니다. 차이를 이해하고 조율한다는 관점으로 읽어보세요.':'일지에 육합이나 육충은 확인되지 않습니다.';
+  $('compatDetails').textContent=`오행 관계 · ${result.er.text}\n천간 관계 · ${heavenly}\n일지 관계 · ${earthly}`;
+  $('compatDetails').style.whiteSpace='pre-line';
+  $('compatResult').classList.add('show');$('compatResult').scrollIntoView({behavior:'smooth',block:'center'});
+ }catch(err){$('compatError').textContent=err.message||'궁합 분석에 실패했습니다.'}
+});
+readShared();
+</script>
+</body>
+</html>
