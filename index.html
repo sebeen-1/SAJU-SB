@@ -20,6 +20,8 @@
 .adminPanel p{font-size:12px;line-height:1.9;color:#cdb8a7}
 .adminField{margin:16px 0}.adminField label{display:block;color:#e9c18e;font-size:13px;margin-bottom:6px}.adminField textarea,.adminField input{box-sizing:border-box;width:100%;padding:11px;background:#0e0b0b;color:#f5e8da;border:1px solid #6e5145;border-radius:4px;font:13px/1.7 'Noto Sans KR',sans-serif}.adminField textarea{min-height:70px;resize:vertical}
 .adminButtons{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}.adminButtons button{background:#8d322a;color:white;padding:12px 17px;border:0;border-radius:4px;cursor:pointer;font-family:inherit}.adminButtons button.secondary{background:#3a2d29}.adminButtons button:disabled{opacity:.45;cursor:not-allowed}.adminNotice{min-height:22px;color:#f0c995;font-size:12px;white-space:pre-line}
+.promoBanner{max-width:1050px;margin:0 auto 45px;padding:0 30px}.promoBanner[hidden]{display:none}.promoBanner figure{margin:0;border:1px solid #644536;background:#110c0b;box-shadow:0 20px 60px #0006;overflow:hidden}.promoBanner img{display:block;width:100%;height:auto}@media(max-width:930px){.promoBanner{padding:0 22px;margin-bottom:35px}}
+.adminSection{margin-top:30px;padding-top:22px;border-top:1px solid #4d3a33}.adminSection h3{margin:0 0 8px;font:700 19px 'Noto Serif KR',serif;color:#eaca9e}.adminImagePreview{margin-top:10px;min-height:90px;display:flex;align-items:center;justify-content:center;background:#0e0b0b;border:1px dashed #6e5145;border-radius:4px;padding:8px;color:#8f7f76;font-size:12px}.adminImagePreview img{max-width:100%;max-height:320px;display:block}.adminField input[type=file]{padding:9px;cursor:pointer}.adminCheck{display:flex;align-items:center;gap:8px;font-size:13px;color:#d9bd9f;cursor:pointer}.adminCheck input{accent-color:#9a312a;width:16px;height:16px}
 .adminUser{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 12px;background:#0e0b0b;border:1px solid #4d3a33;border-radius:4px;font-size:12px;color:#d9bd9f}.adminFieldHint{font-size:11px;color:#8f7f76;margin-top:4px}
 </style>
 </head>
@@ -36,6 +38,7 @@
 <button class="primary" type="submit">나의 사주 확인하기　→</button><div class="error" id="error" role="alert"></div><p class="hint">입력 정보는 이 사이트의 서버에 저장되지 않습니다. 공유 링크를 생성할 경우 이름과 사주 기둥 정보가 URL에 포함됩니다. 사주 계산에는 외부 만세력 라이브러리를 불러오므로 최초 실행 시 인터넷 연결이 필요합니다. 방문·이용 횟수 통계에 Google Analytics를 사용하며, 입력하신 이름·생년월일·시간은 통계에 포함되지 않습니다.</p></form>
 </section></main>
 <section class="results" id="results" aria-live="polite"><div class="resultHead"><div class="eyebrow">YOUR SAJU CHART</div><h2 id="resultName"></h2><p id="resultDate"></p></div><div class="pillars" id="pillars"></div><div class="analysisGrid"><article class="infoCard"><h3>오행 분포 · 五行</h3><div id="elements"></div><div class="meta">천간과 지지의 표면 글자 8개(시간을 모르면 6개)를 기준으로 계산하며, 지장간·월령에 따른 강약은 반영하지 않습니다.</div></article><article class="infoCard"><h3>나의 일간 · 日干</h3><p id="reading"></p></article></div><p class="footer">절기 기준 년주·월주 / 자시 기준 및 지역별 진태양시 보정 등은 유파에 따라 달라질 수 있습니다.<br>해석은 전통 명리학에 기반한 참고 콘텐츠이며 과학적으로 검증된 성격·미래 예측이 아닙니다.</p></section>
+<section class="promoBanner" id="promoBanner" hidden aria-label="사이트 이미지"><figure><img id="promoImage" alt="" decoding="async" /></figure></section>
 <section class="compatIntro" id="compatSection"><div class="compatBox"><div class="eyebrow">FATE & CONNECTION</div><h2 id="compatHeading">나만의 사주 궁합 링크 만들기</h2><p id="compatGuide">먼저 위에서 내 사주 정보를 입력하고, 개인 궁합 링크를 만드세요. 친구가 그 링크로 접속하면 자신의 사주를 입력해 나와의 궁합 점수를 확인할 수 있습니다.</p><p id="referenceInfo">기준 상대: 아직 정해지지 않았습니다.</p><button type="button" class="primary compatAction" id="shareBtn">내 궁합 링크 만들기　→</button><div class="field" id="shareArea" style="display:none;margin-top:20px"><label for="shareLink">친구에게 보낼 링크</label><input type="text" id="shareLink" readonly aria-label="궁합 공유 링크"/><button type="button" class="primary" id="copyBtn">링크 복사하기</button></div><button type="button" class="primary compatAction" id="compatBtn" style="display:none">궁합 결과 보기　→</button><button type="button" id="newLinkBtn" style="display:none;margin-top:14px;background:none;color:#ebc89b;border:1px solid #715243;padding:12px;cursor:pointer;width:100%">내 링크 새로 만들기</button><p class="error" id="compatError" role="alert"></p><div class="compatResult" id="compatResult" aria-live="polite"><div class="eyebrow">SAJU COMPATIBILITY</div><div class="score" id="compatScore"></div><p id="compatSummary"></p><div class="compatColumns"><div class="compatMini" id="meCompat"></div><div class="compatMini" id="targetCompat"></div></div><div class="compatNotes" id="compatDetails"></div><p class="compatDisclaimer">점수는 사주 기호를 활용해 이 사이트가 만든 오락용 지표로 관계의 성공을 예측하지 않습니다. 공유 URL에는 이름과 사주 기둥 정보가 포함됩니다. 링크를 가진 누구나 이를 확인할 수 있으니 공유에 동의할 때만 이용하세요. 이 데모는 계정이나 서버에 정보를 저장하지 않습니다.</p></div></div></section>
 <footer class="footer">© 赤月堂 · SAJU EXPERIENCE</footer>
 
@@ -57,6 +60,16 @@
 <div id="adminFields"></div>
 <div class="adminButtons"><button type="button" id="adminPreview">미리보기 적용</button><button type="button" id="adminSave" disabled>저장 (모든 방문자에게 반영)</button><button type="button" class="secondary" id="adminLoadSaved">현재 게시 문구 불러오기</button><button type="button" class="secondary" id="adminReset">기본 문구로 되돌리기</button><button type="button" class="secondary adminClose">닫기</button></div>
 <p class="adminNotice" id="adminNotice" role="status"></p>
+<div class="adminSection">
+<h3>사진 배너</h3>
+<p>입력창과 궁합 영역 사이에 표시되는 사진입니다. 업로드한 사진은 자동으로 줄여서(가로 최대 1600px) 저장되며, 저장하면 모든 방문자에게 바로 반영됩니다.</p>
+<div class="adminImagePreview" id="bannerPreview">아직 등록된 사진이 없습니다.</div>
+<div class="adminField"><label for="bannerFile">새 사진 선택 (JPG · PNG · WEBP)</label><input type="file" id="bannerFile" accept="image/jpeg,image/png,image/webp" /></div>
+<div class="adminField"><label for="bannerAlt">사진 설명 (화면 낭독기용 · 선택)</label><input type="text" id="bannerAlt" maxlength="100" placeholder="예: 적월당 가을 이벤트 안내" /></div>
+<label class="adminCheck"><input type="checkbox" id="bannerVisible" checked /> 사이트에 사진 표시</label>
+<div class="adminButtons"><button type="button" id="bannerSave" disabled>사진 저장 (모든 방문자에게 반영)</button><button type="button" class="secondary" id="bannerRemove" disabled>사진 삭제</button></div>
+<p class="adminNotice" id="bannerNotice" role="status"></p>
+</div>
 </div></div></div>
 
 <script src="https://cdn.jsdelivr.net/npm/lunar-javascript@1.7.7/lunar.min.js"></script>
@@ -291,6 +304,52 @@ const site=window.SajuSite;
 const isPlaceholder=v=>!v||/^YOUR_/.test(String(v));
 const configured=['apiKey','authDomain','projectId','appId'].every(k=>!isPlaceholder(firebaseConfig[k]));
 
+/* ───────── 사진 배너 ─────────
+   Firebase Storage는 무료(Spark) 요금제에서 쓸 수 없어서, 사진을 브라우저에서 줄인 뒤
+   Firestore 문서(siteConfig/banner)에 data URL로 저장합니다. */
+const BANNER_MAX_CHARS=500000;   // 저장 목표 크기(약 370KB). firestore.rules 상한은 700000자
+const IMAGE_DATA_RE=/^data:image\/(webp|jpeg|png);base64,[A-Za-z0-9+/=]+$/;
+let currentBanner=null;
+function validBannerImage(v){return typeof v==='string'&&v.length<=700000&&IMAGE_DATA_RE.test(v)}
+function renderBanner(data){
+ const box=$('promoBanner'),img=$('promoImage');
+ if(data&&data.visible===true&&validBannerImage(data.image)){
+  if(img.src!==data.image)img.src=data.image;
+  img.alt=typeof data.alt==='string'?data.alt.slice(0,100):'';
+  box.hidden=false;
+ }else{box.hidden=true;img.removeAttribute('src')}
+}
+async function loadImageSource(file){
+ if(window.createImageBitmap){try{return await createImageBitmap(file)}catch(e){}}
+ const url=URL.createObjectURL(file);
+ try{return await new Promise((res,rej)=>{const im=new Image();im.onload=()=>res(im);im.onerror=()=>rej(Error('사진을 읽을 수 없습니다.'));im.src=url})}
+ finally{setTimeout(()=>URL.revokeObjectURL(url),1000)}
+}
+async function compressImage(file){
+ if(!/^image\/(jpeg|png|webp)$/.test(file.type))throw Error('JPG, PNG, WEBP 사진만 올릴 수 있습니다.');
+ if(file.size>20*1024*1024)throw Error('20MB 이하의 사진을 선택해 주세요.');
+ const src=await loadImageSource(file);
+ const w0=src.width,h0=src.height;
+ if(!w0||!h0)throw Error('사진 크기를 확인할 수 없습니다.');
+ let maxW=1600;
+ for(let round=0;round<6;round++){
+  const scale=Math.min(1,maxW/w0),w=Math.max(1,Math.round(w0*scale)),h=Math.max(1,Math.round(h0*scale));
+  const canvas=document.createElement('canvas');canvas.width=w;canvas.height=h;
+  const ctx=canvas.getContext('2d');
+  for(const q of [0.86,0.76,0.66,0.56]){
+   ctx.clearRect(0,0,w,h);ctx.drawImage(src,0,0,w,h);
+   let url=canvas.toDataURL('image/webp',q);
+   if(!url.startsWith('data:image/webp')){ // WEBP 인코딩을 지원하지 않는 브라우저 → JPG (투명 부분은 사이트 배경색으로)
+    ctx.fillStyle='#080707';ctx.fillRect(0,0,w,h);ctx.drawImage(src,0,0,w,h);
+    url=canvas.toDataURL('image/jpeg',q);
+   }
+   if(url.length<=BANNER_MAX_CHARS)return {url,w,h};
+  }
+  maxW=Math.round(maxW*0.8);
+ }
+ throw Error('사진을 충분히 줄이지 못했습니다. 더 단순하거나 작은 사진을 사용해 주세요.');
+}
+
 if(!configured){
  window.__firebaseState='unconfigured';
  console.warn('[적월당] firebaseConfig가 비어 있어 기본 문구로 동작합니다.');
@@ -309,7 +368,15 @@ if(!configured){
   site.apply(data);site.cache(data);
  },err=>console.warn('[적월당] 사이트 문구를 불러오지 못했습니다:',err.code));
 
- setupAdmin(auth,db,configRef);
+ // 모든 방문자: siteConfig/banner(사진 배너) 실시간 구독
+ const bannerRef=doc(db,'siteConfig','banner');
+ onSnapshot(bannerRef,snap=>{
+  currentBanner=snap.exists()?snap.data():null;
+  renderBanner(currentBanner);
+  if(typeof window.__onBannerChange==='function')window.__onBannerChange(currentBanner);
+ },err=>console.warn('[적월당] 사진 배너를 불러오지 못했습니다:',err.code));
+
+ setupAdmin(auth,db,configRef,bannerRef);
 }
 
 /* Google Analytics
@@ -328,10 +395,57 @@ async function initAnalytics(app){
 }
 
 /* 관리자: 이메일/비밀번호 로그인 → admins/{uid} 문서로 권한 확인 → siteConfig/main 저장 */
-async function setupAdmin(auth,db,configRef){
+async function setupAdmin(auth,db,configRef,bannerRef){
  let isAdmin=false;
  const notice=t=>{$('adminNotice').textContent=t};
- const setSave=on=>{$('adminSave').disabled=!on};
+ const setSave=on=>{$('adminSave').disabled=!on;$('bannerSave').disabled=!on;$('bannerRemove').disabled=!on};
+
+ /* 사진 배너 편집 */
+ let pendingImage=null; // 새로 고른(압축된) 사진, 저장 전
+ const bannerNotice=t=>{$('bannerNotice').textContent=t};
+ const showPreview=(url,label)=>{
+  const box=$('bannerPreview');box.replaceChildren();
+  if(url&&validBannerImage(url)){const im=document.createElement('img');im.src=url;im.alt='배너 미리보기';box.appendChild(im)}
+  else box.textContent=label||'아직 등록된 사진이 없습니다.';
+ };
+ const syncBannerEditor=data=>{
+  if(pendingImage)return;
+  showPreview(data?.image);
+  $('bannerAlt').value=typeof data?.alt==='string'?data.alt:'';
+  $('bannerVisible').checked=data?data.visible!==false:true;
+ };
+ window.__onBannerChange=syncBannerEditor;
+ syncBannerEditor(currentBanner);
+ $('bannerFile').addEventListener('change',async e=>{
+  const file=e.target.files?.[0];if(!file)return;
+  bannerNotice('사진을 줄이는 중…');
+  try{
+   const r=await compressImage(file);
+   pendingImage=r.url;showPreview(r.url);
+   bannerNotice(`준비 완료: ${r.w}×${r.h}px, 약 ${Math.round(r.url.length*0.75/1024)}KB. "사진 저장"을 눌러야 사이트에 반영됩니다.`);
+  }catch(err){pendingImage=null;e.target.value='';syncBannerEditor(currentBanner);bannerNotice(err.message)}
+ });
+ const writeBanner=async(image,visible)=>{
+  await setDoc(bannerRef,{image,alt:$('bannerAlt').value.trim().slice(0,100),visible,updatedAt:serverTimestamp(),updatedBy:auth.currentUser.uid});
+ };
+ $('bannerSave').addEventListener('click',async()=>{
+  if(!isAdmin||!auth.currentUser){bannerNotice('관리자 권한이 확인되지 않았습니다.');return}
+  const image=pendingImage||(validBannerImage(currentBanner?.image)?currentBanner.image:'');
+  const visible=$('bannerVisible').checked;
+  if(!image&&visible){bannerNotice('먼저 사진을 선택해 주세요.');return}
+  setSave(false);bannerNotice('저장 중…');
+  try{await writeBanner(image,visible&&!!image);pendingImage=null;$('bannerFile').value='';bannerNotice(visible?'저장 완료! 모든 방문자에게 사진이 표시됩니다.':'저장 완료! 사진을 숨김 상태로 저장했습니다.')}
+  catch(err){bannerNotice(err.code==='permission-denied'?'저장 권한이 없습니다. firestore.rules에 사진 배너 규칙이 게시됐는지 확인해 주세요.':'저장 실패: '+(err.code||err.message))}
+  finally{setSave(isAdmin)}
+ });
+ $('bannerRemove').addEventListener('click',async()=>{
+  if(!isAdmin||!auth.currentUser)return;
+  if(!confirm('사진을 삭제하면 모든 방문자 화면에서 사라집니다. 삭제할까요?'))return;
+  setSave(false);bannerNotice('삭제 중…');
+  try{pendingImage=null;$('bannerFile').value='';await writeBanner('',false);bannerNotice('사진을 삭제했습니다.')}
+  catch(err){bannerNotice('삭제 실패: '+(err.code||err.message))}
+  finally{setSave(isAdmin)}
+ });
 
  for(const [key,label,,max] of site.fields){
   const wrap=document.createElement('div');wrap.className='adminField';
