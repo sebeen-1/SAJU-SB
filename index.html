@@ -6,6 +6,7 @@
 <title>적월당 | 나의 사주를 읽다</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://www.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
 :root{--black:#080707;--panel:#15100f;--gold:#d6af78;--muted:#aaa09a;--border:#504038;--red:#a42723;--cream:#f5e8da}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--cream);font-family:'Noto Sans KR',sans-serif}body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 10%,#5b13121c,transparent 65%);z-index:-1}.layout{max-width:1260px;margin:auto;min-height:100vh;display:grid;grid-template-columns:minmax(0,1fr) minmax(370px,480px);align-items:center;gap:35px;padding:38px 44px}.art{position:relative;min-height:750px;display:flex;align-items:center;justify-content:center}.art img{width:100%;max-width:775px;max-height:850px;object-fit:contain;filter:drop-shadow(0 15px 50px #8706003d)}.art:after{content:"";position:absolute;inset:auto 0 0;height:100px;background:linear-gradient(transparent,var(--black));pointer-events:none}.seal{position:absolute;top:10px;left:0;writing-mode:vertical-rl;font-family:'Noto Serif KR',serif;color:var(--gold);letter-spacing:8px;font-size:13px}.panel{padding:20px 0;position:relative;z-index:1}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:4px;font-weight:700}.brand{font-family:'Noto Serif KR',serif;font-size:58px;font-weight:800;letter-spacing:9px;margin:15px 0 2px}.subtitle{color:#d9b08e;font-family:'Noto Serif KR',serif;letter-spacing:2px;font-size:18px}.description{margin:24px 0 32px;color:#c2b4ad;font-size:13px;line-height:1.9}.line{width:65px;height:1px;background:var(--gold);margin:23px 0}.formBox{background:#1a1312c9;border:1px solid #533b33;padding:28px;border-radius:3px;box-shadow:0 20px 70px #0007}.formTitle{font-family:'Noto Serif KR',serif;font-size:20px;margin:0 0 20px}.field{margin:0 0 16px}.field label,.miniLabel{display:block;color:#dfc9b4;font-size:12px;margin-bottom:8px}.field input,.field select{width:100%;height:46px;border:1px solid #57443c;background:#100d0c;color:#f8e9da;outline:none;padding:0 13px;border-radius:2px;font-family:inherit;font-size:14px;color-scheme:dark}.field input:focus,.field select:focus{border-color:var(--gold)}.switch{display:flex;gap:8px;margin-bottom:18px}.switch label{flex:1;cursor:pointer}.switch input{position:absolute;opacity:0}.switch span{display:block;text-align:center;padding:11px;border:1px solid #65463a;color:#b7aaa0;font-size:13px}.switch input:checked+span{background:#792521;border-color:#a44f42;color:#fff}.dates{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:9px}.times{display:grid;grid-template-columns:1fr 1fr;gap:10px}.checks{display:flex;gap:20px;flex-wrap:wrap;margin:12px 0 19px}.checks label{color:#d3beb0;font-size:12px;display:flex;gap:8px;align-items:center;cursor:pointer}.checks input{accent-color:#9a312a}.primary{background:linear-gradient(100deg,#8d2422,#bb4135);color:white;font-family:'Noto Serif KR',serif;font-size:17px;font-weight:700;letter-spacing:2px;border:none;width:100%;height:56px;cursor:pointer;margin-top:9px}.primary:hover{filter:brightness(1.17)}.hint{font-size:11px;line-height:1.7;color:#91847e;margin:14px 0 0}.error{font-size:12px;color:#ffb2a6;line-height:1.7;margin:10px 0;min-height:0}.results{max-width:1050px;margin:0 auto 90px;padding:0 30px;display:none}.results.show{display:block}.resultHead{text-align:center;border-top:1px solid #604133;padding-top:35px}.resultHead h2{font-family:'Noto Serif KR',serif;font-size:30px;margin:10px 0}.resultHead p{color:#c1aaa0;font-size:13px;line-height:1.8}.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:30px 0}.pillar{text-align:center;background:#1a1211;border:1px solid #594035;padding:22px 5px 20px}.pillar small{font-size:12px;color:#bca79b}.hanja{font-family:'Noto Serif KR',serif;font-size:42px;color:#f0c995;margin:13px 0 5px}.hangul{font-size:15px;color:#f2e4d8}.day{border-color:#c48c5a;background:#281817}.analysisGrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.infoCard{padding:26px;border:1px solid #50372e;background:#171110}.infoCard h3{font-family:'Noto Serif KR',serif;margin:0 0 15px;color:#eaca9e}.element{display:grid;grid-template-columns:38px 1fr 29px;align-items:center;gap:10px;margin:10px 0;font-size:13px}.bar{height:9px;background:#332a28}.bar span{display:block;height:100%;background:linear-gradient(90deg,#8b3830,#e7ac76)}.infoCard p{font-size:13px;line-height:2;color:#cdbdb3;margin:0}.meta{font-size:12px;color:#baada3;margin-top:20px;line-height:1.8}.footer{text-align:center;margin:36px auto;color:#7b6c64;font-size:11px;line-height:1.9}@media(max-width:930px){.layout{grid-template-columns:1fr;padding:0 22px 30px;gap:0}.art{min-height:0;height:360px;overflow:hidden}.art img{max-height:600px;object-position:center 36%;transform:translateY(65px)}.seal{top:25px;left:8px}.panel{max-width:550px;width:100%;margin:auto}.brand{font-size:43px}.description{margin:16px 0 25px}.formBox{padding:20px}.analysisGrid{grid-template-columns:1fr}.results{padding:0 22px}.pillars{gap:7px}.hanja{font-size:32px}.pillar{padding:15px 2px}}
@@ -18,7 +19,8 @@
 .adminPanel h2{margin:0 0 12px;font:700 26px 'Noto Serif KR',serif;color:#eaca9e}
 .adminPanel p{font-size:12px;line-height:1.9;color:#cdb8a7}
 .adminField{margin:16px 0}.adminField label{display:block;color:#e9c18e;font-size:13px;margin-bottom:6px}.adminField textarea,.adminField input{box-sizing:border-box;width:100%;padding:11px;background:#0e0b0b;color:#f5e8da;border:1px solid #6e5145;border-radius:4px;font:13px/1.7 'Noto Sans KR',sans-serif}.adminField textarea{min-height:70px;resize:vertical}
-.adminButtons{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}.adminButtons button{background:#8d322a;color:white;padding:12px 17px;border:0;border-radius:4px;cursor:pointer;font-family:inherit}.adminButtons button.secondary{background:#3a2d29}.adminNotice{min-height:22px;color:#f0c995;font-size:12px}
+.adminButtons{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}.adminButtons button{background:#8d322a;color:white;padding:12px 17px;border:0;border-radius:4px;cursor:pointer;font-family:inherit}.adminButtons button.secondary{background:#3a2d29}.adminButtons button:disabled{opacity:.45;cursor:not-allowed}.adminNotice{min-height:22px;color:#f0c995;font-size:12px;white-space:pre-line}
+.adminUser{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 12px;background:#0e0b0b;border:1px solid #4d3a33;border-radius:4px;font-size:12px;color:#d9bd9f}.adminFieldHint{font-size:11px;color:#8f7f76;margin-top:4px}
 </style>
 </head>
 <body>
@@ -31,7 +33,7 @@
 <div class="field"><label>생년월일</label><div class="dates"><input id="year" type="number" min="1900" max="2100" placeholder="년도 (예: 1998)" required /><select id="month" aria-label="태어난 월" required></select><select id="date" aria-label="태어난 일" required></select></div></div>
 <div class="checks"><label id="leapWrap" style="display:none"><input id="leap" type="checkbox" /> 음력 윤달</label><label><input id="unknown" type="checkbox" /> 태어난 시간 모름</label></div>
 <div class="field" id="birthTime"><label>태어난 시간 (한국 표준시 기준)</label><div class="times"><select id="hour" aria-label="태어난 시"></select><select id="minute" aria-label="태어난 분"></select></div></div>
-<button class="primary" type="submit">나의 사주 확인하기　→</button><div class="error" id="error" role="alert"></div><p class="hint">입력 정보는 이 사이트의 서버에 저장되지 않습니다. 공유 링크를 생성할 경우 이름과 사주 기둥 정보가 URL에 포함됩니다. 사주 계산에는 외부 만세력 라이브러리를 불러오므로 최초 실행 시 인터넷 연결이 필요합니다.</p></form>
+<button class="primary" type="submit">나의 사주 확인하기　→</button><div class="error" id="error" role="alert"></div><p class="hint">입력 정보는 이 사이트의 서버에 저장되지 않습니다. 공유 링크를 생성할 경우 이름과 사주 기둥 정보가 URL에 포함됩니다. 사주 계산에는 외부 만세력 라이브러리를 불러오므로 최초 실행 시 인터넷 연결이 필요합니다. 방문·이용 횟수 통계에 Google Analytics를 사용하며, 입력하신 이름·생년월일·시간은 통계에 포함되지 않습니다.</p></form>
 </section></main>
 <section class="results" id="results" aria-live="polite"><div class="resultHead"><div class="eyebrow">YOUR SAJU CHART</div><h2 id="resultName"></h2><p id="resultDate"></p></div><div class="pillars" id="pillars"></div><div class="analysisGrid"><article class="infoCard"><h3>오행 분포 · 五行</h3><div id="elements"></div><div class="meta">천간과 지지의 표면 글자 8개(시간을 모르면 6개)를 기준으로 계산하며, 지장간·월령에 따른 강약은 반영하지 않습니다.</div></article><article class="infoCard"><h3>나의 일간 · 日干</h3><p id="reading"></p></article></div><p class="footer">절기 기준 년주·월주 / 자시 기준 및 지역별 진태양시 보정 등은 유파에 따라 달라질 수 있습니다.<br>해석은 전통 명리학에 기반한 참고 콘텐츠이며 과학적으로 검증된 성격·미래 예측이 아닙니다.</p></section>
 <section class="compatIntro" id="compatSection"><div class="compatBox"><div class="eyebrow">FATE & CONNECTION</div><h2 id="compatHeading">나만의 사주 궁합 링크 만들기</h2><p id="compatGuide">먼저 위에서 내 사주 정보를 입력하고, 개인 궁합 링크를 만드세요. 친구가 그 링크로 접속하면 자신의 사주를 입력해 나와의 궁합 점수를 확인할 수 있습니다.</p><p id="referenceInfo">기준 상대: 아직 정해지지 않았습니다.</p><button type="button" class="primary compatAction" id="shareBtn">내 궁합 링크 만들기　→</button><div class="field" id="shareArea" style="display:none;margin-top:20px"><label for="shareLink">친구에게 보낼 링크</label><input type="text" id="shareLink" readonly aria-label="궁합 공유 링크"/><button type="button" class="primary" id="copyBtn">링크 복사하기</button></div><button type="button" class="primary compatAction" id="compatBtn" style="display:none">궁합 결과 보기　→</button><button type="button" id="newLinkBtn" style="display:none;margin-top:14px;background:none;color:#ebc89b;border:1px solid #715243;padding:12px;cursor:pointer;width:100%">내 링크 새로 만들기</button><p class="error" id="compatError" role="alert"></p><div class="compatResult" id="compatResult" aria-live="polite"><div class="eyebrow">SAJU COMPATIBILITY</div><div class="score" id="compatScore"></div><p id="compatSummary"></p><div class="compatColumns"><div class="compatMini" id="meCompat"></div><div class="compatMini" id="targetCompat"></div></div><div class="compatNotes" id="compatDetails"></div><p class="compatDisclaimer">점수는 사주 기호를 활용해 이 사이트가 만든 오락용 지표로 관계의 성공을 예측하지 않습니다. 공유 URL에는 이름과 사주 기둥 정보가 포함됩니다. 링크를 가진 누구나 이를 확인할 수 있으니 공유에 동의할 때만 이용하세요. 이 데모는 계정이나 서버에 정보를 저장하지 않습니다.</p></div></div></section>
@@ -40,13 +42,79 @@
 <button class="adminEntry" id="adminOpen" type="button">⚙ 관리자</button>
 <div class="adminOverlay" id="adminOverlay" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
 <div class="adminPanel"><h2 id="adminTitle">관리자 · 사이트 문구 편집</h2>
-<div id="adminLogin"><p>관리자 미리보기용 임시 비밀번호를 입력하세요. Firebase 연결 전에는 변경 내용을 전체 방문자에게 저장할 수 없습니다.</p><div class="adminField"><label for="adminPassword">비밀번호</label><input type="password" id="adminPassword" autocomplete="off" inputmode="numeric" /></div><div class="adminButtons"><button type="button" id="adminLoginBtn">관리자 입장</button><button type="button" class="secondary adminClose">닫기</button></div><p class="adminNotice" id="adminLoginMsg"></p></div>
-<div id="adminEditor" hidden><p>미리보기는 현재 브라우저에서만 적용됩니다. Firebase를 연동하면 저장 버튼을 활성화해 전체 방문자에게 반영할 수 있습니다.</p><div id="adminFields"></div><div class="adminButtons"><button type="button" id="adminPreview">미리보기 적용</button><button type="button" id="adminSave" disabled>저장 (Firebase 연동 후 활성화)</button><button type="button" class="secondary" id="adminReset">원래 문구로 되돌리기</button><button type="button" class="secondary adminClose">닫기</button></div><p class="adminNotice" id="adminNotice"></p><p>임시 비밀번호는 공개된 HTML 코드에서 확인할 수 있으므로 보안용이 아닙니다. 실제 관리자 저장은 Firebase Authentication과 Firestore 보안 규칙 연결 후 구현하세요.</p></div></div></div>
+<div id="adminLogin">
+<p>Firebase Authentication에 등록된 관리자 계정(이메일/비밀번호)으로 로그인하세요.</p>
+<form id="adminLoginForm" novalidate>
+<div class="adminField"><label for="adminEmail">이메일</label><input type="email" id="adminEmail" autocomplete="username" required /></div>
+<div class="adminField"><label for="adminPassword">비밀번호</label><input type="password" id="adminPassword" autocomplete="current-password" required /></div>
+<div class="adminButtons"><button type="submit" id="adminLoginBtn">관리자 로그인</button><button type="button" class="secondary adminClose">닫기</button></div>
+</form>
+<p class="adminNotice" id="adminLoginMsg" role="alert"></p>
+</div>
+<div id="adminEditor" hidden>
+<div class="adminUser"><span id="adminUser"></span><button type="button" id="adminLogout" style="background:#3a2d29;color:#fff;border:0;border-radius:4px;padding:7px 12px;cursor:pointer;font-family:inherit">로그아웃</button></div>
+<p>문구를 수정한 뒤 <b>미리보기 적용</b>으로 이 브라우저에서 먼저 확인하고, <b>저장</b>을 누르면 Firestore에 기록되어 모든 방문자 화면에 자동 반영됩니다. 칸을 비워 두면 기본 문구가 표시됩니다.</p>
+<div id="adminFields"></div>
+<div class="adminButtons"><button type="button" id="adminPreview">미리보기 적용</button><button type="button" id="adminSave" disabled>저장 (모든 방문자에게 반영)</button><button type="button" class="secondary" id="adminLoadSaved">현재 게시 문구 불러오기</button><button type="button" class="secondary" id="adminReset">기본 문구로 되돌리기</button><button type="button" class="secondary adminClose">닫기</button></div>
+<p class="adminNotice" id="adminNotice" role="status"></p>
+</div></div></div>
+
 <script src="https://cdn.jsdelivr.net/npm/lunar-javascript@1.7.7/lunar.min.js"></script>
 <script>
 const $=id=>document.getElementById(id);
 let visitorChart=null;
 let sharedChart=null;
+
+/* ───────── 사이트 문구 (관리자 편집 대상) ─────────
+   기본 문구는 HTML에 적힌 그대로이며, Firestore siteConfig/main 문서가 있으면 그 내용으로 덮어씁니다.
+   [키, 라벨, 선택자, 최대 글자 수] — 최대 글자 수는 firestore.rules와 동일하게 유지하세요. */
+const SITE_FIELDS=[
+ ['brand','사이트 이름','.brand',40],
+ ['subtitle','메인 부제목','.subtitle',80],
+ ['description','메인 소개 문구','.description',300],
+ ['formTitle','입력창 제목','.formTitle',40],
+ ['formButton','사주 확인 버튼','#sajuForm button[type="submit"]',40],
+ ['formHint','개인정보/안내 문구','#sajuForm .hint',600],
+ ['compatTitle','궁합 영역 제목','#compatHeading',60],
+ ['compatGuide','궁합 안내 문구','#compatGuide',400],
+ ['shareButton','궁합 링크 버튼','#shareBtn',40],
+ ['compatButton','궁합 결과 버튼','#compatBtn',40],
+ ['footer','하단 문구','body > footer.footer',120]
+];
+const MULTILINE_FIELDS=new Set(['description','formHint','compatGuide']);
+const SHARED_LINK_FIELDS=new Set(['compatTitle','compatGuide']); // 공유 링크로 접속하면 상대 이름이 들어간 문구가 우선
+const SITE_TEXT_CACHE_KEY='jeokwoldang_site_text_v1';
+function readNodeText(node){const c=node.cloneNode(true);c.querySelectorAll('br').forEach(b=>b.replaceWith('\n'));return c.textContent.replace(/[ \t]*\n[ \t]*/g,'\n').trim()}
+const DEFAULT_SITE_TEXT=Object.fromEntries(SITE_FIELDS.map(([key,,selector])=>{const n=document.querySelector(selector);return [key,n?readNodeText(n):'']}));
+let siteText={...DEFAULT_SITE_TEXT};
+function sanitizeSiteText(data){
+ const out={...DEFAULT_SITE_TEXT};
+ if(data&&typeof data==='object')for(const [key,,,max] of SITE_FIELDS){const v=data[key];if(typeof v==='string'&&v.trim()&&v.length<=max)out[key]=v.trim()}
+ return out;
+}
+function applySiteText(data){
+ siteText=sanitizeSiteText(data);
+ for(const [key,,selector] of SITE_FIELDS){
+  if(SHARED_LINK_FIELDS.has(key)&&sharedChart)continue;
+  const node=document.querySelector(selector);if(!node)continue;
+  node.textContent=siteText[key]; // textContent만 사용 → 저장된 문구에 HTML이 있어도 실행되지 않음
+  if(MULTILINE_FIELDS.has(key))node.style.whiteSpace='pre-line';
+ }
+}
+window.SajuSite={
+ fields:SITE_FIELDS,
+ defaults:{...DEFAULT_SITE_TEXT},
+ get current(){return {...siteText}},
+ apply:applySiteText,
+ cache(data){try{const clean={};for(const [k] of SITE_FIELDS)if(typeof data?.[k]==='string')clean[k]=data[k];localStorage.setItem(SITE_TEXT_CACHE_KEY,JSON.stringify(clean))}catch(e){}}
+};
+// 직전 방문 때 받은 문구를 먼저 보여 주어 깜빡임을 줄임 (Firestore 응답이 오면 최신 문구로 교체)
+try{const cached=JSON.parse(localStorage.getItem(SITE_TEXT_CACHE_KEY)||'null');if(cached)applySiteText(cached)}catch(e){}
+
+/* ───────── 이용 통계 (Google Analytics) ─────────
+   이벤트 이름과 비식별 옵션만 보냅니다. 이름·생년월일·시간·사주 기둥은 절대 보내지 않습니다. */
+window.__sajuTrackQueue=window.__sajuTrackQueue||[];
+function track(name,params){try{if(typeof window.sajuAnalytics==='function')window.sajuAnalytics(name,params||{});else if(window.__sajuTrackQueue.length<50)window.__sajuTrackQueue.push([name,params||{}])}catch(e){}}
 
 const selectFill=(id,start,end,suffix)=>{for(let i=start;i<=end;i++){let o=document.createElement('option');o.value=i;o.textContent=String(i).padStart(2,'0')+suffix;$(id).appendChild(o)}};
 selectFill('month',1,12,'월'); selectFill('date',1,31,'일');selectFill('hour',0,23,'시');selectFill('minute',0,59,'분');
@@ -59,7 +127,7 @@ const elemNames=['목','화','토','금','수'];const stemElem=[0,0,1,1,2,2,3,3,
 const stemDesc=['갑목(甲木)은 곧게 자라나는 큰 나무에 비유됩니다. 전통 명리학에서는 추진력과 성장 의지의 상징으로 봅니다.','을목(乙木)은 유연한 풀과 덩굴에 비유됩니다. 변화에 적응하는 힘과 섬세함을 상징합니다.','병화(丙火)는 밝게 비추는 태양에 비유됩니다. 드러나는 에너지와 활력을 상징합니다.','정화(丁火)는 정교하게 타오르는 촛불에 비유됩니다. 집중력과 따뜻함을 상징합니다.','무토(戊土)는 넓고 큰 산에 비유됩니다. 중심과 안정감을 상징합니다.','기토(己土)는 식물을 기르는 흙에 비유됩니다. 포용력과 실용성을 상징합니다.','경금(庚金)은 단단한 쇠에 비유됩니다. 결단력과 원칙을 상징합니다.','신금(辛金)은 다듬어진 보석에 비유됩니다. 정교함과 미감을 상징합니다.','임수(壬水)는 드넓은 바다에 비유됩니다. 깊이와 유연한 사고를 상징합니다.','계수(癸水)는 이슬과 빗물에 비유됩니다. 관찰력과 세심함을 상징합니다.'];
 function nativeValid(y,m,d){const date=new Date(y,m-1,d);return date.getFullYear()===y&&date.getMonth()===m-1&&date.getDate()===d}
 function pill(han,kor,label,highlight){return `<div class="pillar ${highlight?'day':''}"><small>${label}</small><div class="hanja">${han.slice(0,1)}<br>${han.slice(1)}</div><div class="hangul">${kor}</div></div>`}
-function korOf(gz){return korStem[stems.indexOf(gz[0])]+korBranch[branches.indexOf(gz[1])]} 
+function korOf(gz){return korStem[stems.indexOf(gz[0])]+korBranch[branches.indexOf(gz[1])]}
 $('sajuForm').addEventListener('submit',e=>{
 e.preventDefault();$('error').textContent='';
 try{
@@ -86,6 +154,7 @@ try{
  let max=Math.max(...counts,1);$('elements').innerHTML=counts.map((v,i)=>`<div class="element"><span>${elemNames[i]} · ${'木火土金水'[i]}</span><div class="bar"><span style="width:${v/max*100}%"></span></div><strong>${v}</strong></div>`).join('');
  let idx=stems.indexOf(gz[2][0]);$('reading').textContent=stemDesc[idx]+'\n\n일간은 태어난 날의 천간으로, 전통 사주 해석에서 자신을 나타내는 중심 글자입니다. 다만 이 설명만으로 성격이나 운명을 단정할 수는 없습니다.';$('reading').style.whiteSpace='pre-line';
  $('results').classList.add('show');$('results').scrollIntoView({behavior:'smooth',block:'start'});
+ track('saju_analysis',{calendar_type:kind,birth_time_known:unknown?'no':'yes'});
  }catch(err){$('error').textContent=err.message||'계산할 수 없습니다. 입력값을 확인해 주세요.'}
 });
 
@@ -115,6 +184,7 @@ function readShared(){
   $('compatGuide').textContent=sharedChart.name+'님이 보낸 궁합 링크입니다. 위에서 내 생년월일과 태어난 시간을 입력하고 궁합 결과를 확인하세요.';
   $('referenceInfo').textContent='공유한 사람: '+sharedChart.name+' · 일주 '+sharedChart.gz[2];
   $('shareBtn').style.display='none';$('compatBtn').style.display='block';$('newLinkBtn').style.display='block';
+  track('shared_link_open');
  }catch(err){$('compatError').textContent=err.message||'링크를 열 수 없습니다.'}
 }
 $('shareBtn').addEventListener('click',()=>{
@@ -122,13 +192,14 @@ $('shareBtn').addEventListener('click',()=>{
  if(!visitorChart){$('compatError').textContent='먼저 위에서 내 사주를 계산해 주세요.';return}
  const link=location.href.split('#')[0]+'#match='+encodeShare(visitorChart);
  $('shareLink').value=link;$('shareArea').style.display='block';
+ track('share_link_create');
 });
 $('copyBtn').addEventListener('click',async()=>{
  const link=$('shareLink').value;
- try{await navigator.clipboard.writeText(link);$('copyBtn').textContent='복사 완료!'}
+ try{await navigator.clipboard.writeText(link);$('copyBtn').textContent='복사 완료!';track('share_link_copy')}
  catch(e){$('shareLink').focus();$('shareLink').select();$('compatError').textContent='자동 복사가 막혀 있어요. 선택된 링크를 직접 복사해 주세요.'}
 });
-$('newLinkBtn').addEventListener('click',()=>{history.replaceState(null,'',location.pathname+location.search);sharedChart=null;$('compatHeading').textContent='나만의 사주 궁합 링크 만들기';$('compatGuide').textContent='내 정보를 입력하고 친구에게 보낼 링크를 만드세요.';$('referenceInfo').textContent='기준 상대: 아직 정해지지 않았습니다.';$('shareBtn').style.display='block';$('compatBtn').style.display='none';$('newLinkBtn').style.display='none';$('compatResult').classList.remove('show')});
+$('newLinkBtn').addEventListener('click',()=>{history.replaceState(null,'',location.pathname+location.search);sharedChart=null;$('compatHeading').textContent=siteText.compatTitle;$('compatGuide').textContent=siteText.compatGuide;$('compatGuide').style.whiteSpace='pre-line';$('referenceInfo').textContent='기준 상대: 아직 정해지지 않았습니다.';$('shareBtn').style.display='block';$('compatBtn').style.display='none';$('newLinkBtn').style.display='none';$('compatResult').classList.remove('show')});
 window.addEventListener('hashchange',()=>location.reload());
 function escapeHtml(s){return s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('\"','&quot;')}
 function stemElement(stem){return stemElem[stems.indexOf(stem)]}
@@ -170,29 +241,178 @@ $('compatBtn').addEventListener('click',()=>{
   $('compatDetails').textContent=`오행 관계 · ${result.er.text}\n천간 관계 · ${heavenly}\n일지 관계 · ${earthly}`;
   $('compatDetails').style.whiteSpace='pre-line';
   $('compatResult').classList.add('show');$('compatResult').scrollIntoView({behavior:'smooth',block:'center'});
+  track('compat_analysis');
  }catch(err){$('compatError').textContent=err.message||'궁합 분석에 실패했습니다.'}
 });
 readShared();
+
+/* ───────── 관리자 창 열기/닫기 (로그인·저장은 아래 Firebase 모듈이 담당) ───────── */
+window.__firebaseState=window.__firebaseState||'loading';
+$('adminOpen').addEventListener('click',()=>{
+ $('adminOverlay').classList.add('open');
+ const state=window.__firebaseState;
+ if(state==='ready'){if(!$('adminLogin').hidden)$('adminEmail').focus()}
+ else $('adminLoginMsg').textContent=state==='unconfigured'?'firebaseConfig가 아직 입력되지 않았습니다. index.html의 firebaseConfig 값을 채워 주세요.':'Firebase를 불러오지 못했습니다. 인터넷 연결을 확인하고 새로고침해 주세요.';
+});
+// Firebase 모듈이 준비되기 전·설정 전에는 로그인 폼 제출로 페이지가 새로고침되지 않도록 막음
+$('adminLoginForm').addEventListener('submit',e=>{e.preventDefault();if(window.__firebaseState!=='ready')$('adminLoginMsg').textContent=window.__firebaseState==='unconfigured'?'firebaseConfig가 아직 입력되지 않았습니다.':'Firebase를 불러오는 중이거나 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.'});
+const closeAdmin=()=>$('adminOverlay').classList.remove('open');
+document.querySelectorAll('.adminClose').forEach(btn=>btn.addEventListener('click',closeAdmin));
+$('adminOverlay').addEventListener('click',event=>{if(event.target===$('adminOverlay'))closeAdmin()});
+document.addEventListener('keydown',event=>{if(event.key==='Escape')closeAdmin()});
 </script>
+
 <script>
-// 관리자 편집 기능: 추후 Firebase 인증 및 Firestore 저장 기능으로 교체 가능
-const ADMIN_FIELDS = [["brand","사이트 이름",".brand"],["subtitle","메인 부제목",".subtitle"],["description","메인 소개 문구",".description"],["formTitle","입력창 제목",".formTitle"],["formButton","사주 확인 버튼",'#sajuForm button[type="submit"]'],["formHint","개인정보/안내 문구","#sajuForm .hint"],["compatTitle","궁합 영역 제목","#compatHeading"],["compatGuide","궁합 안내 문구","#compatGuide"],["shareButton","궁합 링크 버튼","#shareBtn"],["compatButton","궁합 결과 버튼","#compatBtn"],["footer","하단 문구","body > footer.footer"]];
-const adminEl = id => document.getElementById(id);
-const defaultContent = Object.fromEntries(ADMIN_FIELDS.map(([key,,selector]) => [key,document.querySelector(selector)?.textContent.trim() || '']));
-function applyContent(data){ for(const [key,,selector] of ADMIN_FIELDS){const node=document.querySelector(selector);if(node&&typeof data[key]==='string')node.textContent=data[key];} }
-function fillContent(data){for(const [key] of ADMIN_FIELDS) adminEl('edit_'+key).value=data[key]??'';}
-function getContent(){return Object.fromEntries(ADMIN_FIELDS.map(([key])=>[key,adminEl('edit_'+key).value.trim()]));}
-for(const [key,label] of ADMIN_FIELDS){const wrap=document.createElement('div');wrap.className='adminField';const labelEl=document.createElement('label');labelEl.textContent=label;labelEl.htmlFor='edit_'+key;const input=document.createElement('textarea');input.id='edit_'+key;wrap.append(labelEl,input);adminEl('adminFields').appendChild(wrap);}
-fillContent(defaultContent);
-adminEl('adminOpen').addEventListener('click',()=>{adminEl('adminOverlay').classList.add('open');adminEl('adminLoginMsg').textContent='';});
-document.querySelectorAll('.adminClose').forEach(btn=>btn.addEventListener('click',()=>adminEl('adminOverlay').classList.remove('open')));
-adminEl('adminOverlay').addEventListener('click',event=>{if(event.target===adminEl('adminOverlay'))adminEl('adminOverlay').classList.remove('open');});
-document.addEventListener('keydown',event=>{if(event.key==='Escape')adminEl('adminOverlay').classList.remove('open');});
-function adminLogin(){if(adminEl('adminPassword').value==='9389'){adminEl('adminLogin').hidden=true;adminEl('adminEditor').hidden=false;fillContent(defaultContent);adminEl('adminPassword').value='';}else adminEl('adminLoginMsg').textContent='비밀번호가 올바르지 않습니다.';}
-adminEl('adminLoginBtn').addEventListener('click',adminLogin);
-adminEl('adminPassword').addEventListener('keydown',event=>{if(event.key==='Enter')adminLogin();});
-adminEl('adminPreview').addEventListener('click',()=>{applyContent(getContent());adminEl('adminNotice').textContent='미리보기 적용 완료. 지금 보고 있는 브라우저에서만 변경되며 저장되지 않습니다.';});
-adminEl('adminReset').addEventListener('click',()=>{fillContent(defaultContent);applyContent(defaultContent);adminEl('adminNotice').textContent='기본 문구로 되돌렸습니다.';});
+// Firebase 모듈 CDN이 막히거나 실패하면 상태를 'failed'로 표시 (사주·궁합 기능은 영향 없음)
+setTimeout(()=>{if(window.__firebaseState==='loading')window.__firebaseState='failed'},15000);
+</script>
+<script type="module">
+/* ───────── Firebase (Auth · Firestore · Analytics) ─────────
+   빌드 도구 없이 gstatic CDN의 ES 모듈을 직접 불러옵니다. 이 모듈이 실패해도 사주·궁합 기능은 그대로 동작합니다. */
+import {initializeApp} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
+import {getAuth,setPersistence,browserSessionPersistence,signInWithEmailAndPassword,signOut,onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js';
+import {getFirestore,doc,getDoc,setDoc,onSnapshot,serverTimestamp} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js';
+import {initializeAnalytics,isSupported,logEvent} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics.js';
+
+// ▼ Firebase 콘솔 → 프로젝트 설정(saju-sb2) → 내 앱(웹 앱)의 firebaseConfig 값으로 교체하세요.
+//   (웹용 apiKey는 공개되어도 되는 식별자입니다. 실제 보호는 Firestore 보안 규칙이 담당합니다.)
+const firebaseConfig={
+ apiKey:'YOUR_API_KEY',
+ authDomain:'saju-sb2.firebaseapp.com',
+ projectId:'saju-sb2',
+ storageBucket:'saju-sb2.firebasestorage.app',
+ messagingSenderId:'YOUR_MESSAGING_SENDER_ID',
+ appId:'YOUR_APP_ID',
+ measurementId:'YOUR_MEASUREMENT_ID' // 예: G-ABC123XYZ
+};
+
+const $=id=>document.getElementById(id);
+const site=window.SajuSite;
+const isPlaceholder=v=>!v||/^YOUR_/.test(String(v));
+const configured=['apiKey','authDomain','projectId','appId'].every(k=>!isPlaceholder(firebaseConfig[k]));
+
+if(!configured){
+ window.__firebaseState='unconfigured';
+ console.warn('[적월당] firebaseConfig가 비어 있어 기본 문구로 동작합니다.');
+}else{
+ const app=initializeApp(firebaseConfig);
+ const db=getFirestore(app);
+ const auth=getAuth(app);
+ const configRef=doc(db,'siteConfig','main');
+ window.__firebaseState='ready';
+
+ initAnalytics(app).catch(err=>console.warn('[적월당] Analytics 비활성화:',err?.message||err));
+
+ // 모든 방문자: siteConfig/main 실시간 구독 → 관리자가 저장하면 열려 있는 화면에도 즉시 반영
+ onSnapshot(configRef,snap=>{
+  const data=snap.exists()?snap.data():{};
+  site.apply(data);site.cache(data);
+ },err=>console.warn('[적월당] 사이트 문구를 불러오지 못했습니다:',err.code));
+
+ setupAdmin(auth,db,configRef);
+}
+
+/* Google Analytics
+   - 자동 page_view를 끄고, URL의 #match=… (이름이 담긴 공유 데이터)를 제외한 주소로 직접 기록합니다.
+   - 이벤트: page_view(방문자), saju_analysis, compat_analysis, share_link_create (+ share_link_copy, shared_link_open) */
+async function initAnalytics(app){
+ const mid=firebaseConfig.measurementId;
+ if(isPlaceholder(mid)||!/^G-[A-Z0-9]+$/.test(mid))return;
+ if(!(await isSupported()))return;
+ const cleanUrl=location.origin+location.pathname;
+ const analytics=initializeAnalytics(app,{config:{send_page_view:false,page_location:cleanUrl,page_title:document.title}});
+ const send=(name,params={})=>{try{logEvent(analytics,name,{...params,page_location:cleanUrl})}catch(e){}};
+ send('page_view',{page_title:document.title});
+ window.sajuAnalytics=send;
+ (window.__sajuTrackQueue||[]).splice(0).forEach(([n,p])=>send(n,p));
+}
+
+/* 관리자: 이메일/비밀번호 로그인 → admins/{uid} 문서로 권한 확인 → siteConfig/main 저장 */
+async function setupAdmin(auth,db,configRef){
+ let isAdmin=false;
+ const notice=t=>{$('adminNotice').textContent=t};
+ const setSave=on=>{$('adminSave').disabled=!on};
+
+ for(const [key,label,,max] of site.fields){
+  const wrap=document.createElement('div');wrap.className='adminField';
+  const labelEl=document.createElement('label');labelEl.textContent=label;labelEl.htmlFor='edit_'+key;
+  const input=document.createElement('textarea');input.id='edit_'+key;input.maxLength=max;input.placeholder=site.defaults[key];
+  const hint=document.createElement('div');hint.className='adminFieldHint';hint.textContent=`최대 ${max}자`;
+  wrap.append(labelEl,input,hint);$('adminFields').appendChild(wrap);
+ }
+ const fillEditor=data=>{for(const [k] of site.fields)$('edit_'+k).value=data[k]??''};
+ const readEditor=()=>{
+  const out={};
+  for(const [k,label,,max] of site.fields){
+   const v=$('edit_'+k).value.trim();
+   if(v.length>max)throw Error(`${label}은(는) 최대 ${max}자까지 입력할 수 있습니다.`);
+   out[k]=v;
+  }
+  return out;
+ };
+
+ try{await setPersistence(auth,browserSessionPersistence)}catch(e){} // 탭을 닫으면 자동 로그아웃
+
+ $('adminLoginForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const email=$('adminEmail').value.trim(),pw=$('adminPassword').value;
+  if(!email||!pw){$('adminLoginMsg').textContent='이메일과 비밀번호를 입력해 주세요.';return}
+  $('adminLoginBtn').disabled=true;$('adminLoginMsg').textContent='로그인 중…';
+  try{await signInWithEmailAndPassword(auth,email,pw);$('adminPassword').value='';$('adminLoginMsg').textContent=''}
+  catch(err){$('adminLoginMsg').textContent=authMessage(err.code)}
+  finally{$('adminLoginBtn').disabled=false}
+ });
+
+ onAuthStateChanged(auth,async user=>{
+  isAdmin=false;setSave(false);
+  if(!user){$('adminLogin').hidden=false;$('adminEditor').hidden=true;return}
+  $('adminLogin').hidden=true;$('adminEditor').hidden=false;
+  $('adminUser').textContent=`${user.email} 로그인됨`;
+  fillEditor(site.current);notice('관리자 권한 확인 중…');
+  try{isAdmin=(await getDoc(doc(db,'admins',user.uid))).exists()}catch(err){isAdmin=false}
+  if(auth.currentUser?.uid!==user.uid)return;
+  if(isAdmin){setSave(true);notice('')}
+  else notice(`이 계정에는 관리자 권한이 없어 저장할 수 없습니다.\nFirestore에 admins/${user.uid} 문서를 만들면 관리자로 등록됩니다.`);
+ });
+
+ $('adminPreview').addEventListener('click',()=>{
+  try{site.apply(readEditor());notice('미리보기 적용 완료. 지금 이 브라우저에서만 바뀌었으며 아직 저장되지 않았습니다.')}
+  catch(err){notice(err.message)}
+ });
+ $('adminLoadSaved').addEventListener('click',async()=>{
+  try{const snap=await getDoc(configRef);const data=site.defaults;fillEditor(snap.exists()?{...data,...snap.data()}:data);site.apply(snap.exists()?snap.data():{});notice('현재 게시 중인 문구를 불러왔습니다.')}
+  catch(err){notice('불러오기 실패: '+(err.code||err.message))}
+ });
+ $('adminReset').addEventListener('click',()=>{
+  fillEditor(site.defaults);site.apply(site.defaults);
+  notice('편집창과 미리보기를 기본 문구로 되돌렸습니다. 모든 방문자에게 적용하려면 저장을 눌러 주세요.');
+ });
+ $('adminSave').addEventListener('click',async()=>{
+  if(!isAdmin||!auth.currentUser){notice('관리자 권한이 확인되지 않았습니다.');return}
+  let data;try{data=readEditor()}catch(err){notice(err.message);return}
+  if(!confirm('저장하면 모든 방문자 화면에 바로 반영됩니다. 저장할까요?'))return;
+  setSave(false);notice('저장 중…');
+  try{
+   await setDoc(configRef,{...data,updatedAt:serverTimestamp(),updatedBy:auth.currentUser.uid});
+   notice('저장 완료! 모든 방문자에게 자동 반영됩니다.');
+  }catch(err){
+   notice(err.code==='permission-denied'?'저장 권한이 없습니다. admins/{UID} 문서와 Firestore 보안 규칙을 확인해 주세요.':'저장 실패: '+(err.code||err.message));
+  }finally{setSave(isAdmin)}
+ });
+ $('adminLogout').addEventListener('click',async()=>{await signOut(auth);$('adminLoginMsg').textContent='로그아웃했습니다.'});
+}
+
+function authMessage(code){
+ switch(code){
+  case 'auth/invalid-email':return '이메일 형식이 올바르지 않습니다.';
+  case 'auth/invalid-credential':case 'auth/wrong-password':case 'auth/user-not-found':return '이메일 또는 비밀번호가 올바르지 않습니다.';
+  case 'auth/user-disabled':return '사용이 중지된 계정입니다.';
+  case 'auth/too-many-requests':return '로그인 시도가 너무 많습니다. 잠시 후 다시 시도해 주세요.';
+  case 'auth/network-request-failed':return '네트워크 연결을 확인해 주세요.';
+  case 'auth/operation-not-allowed':return 'Firebase 콘솔에서 이메일/비밀번호 로그인이 활성화되지 않았습니다.';
+  default:return '로그인에 실패했습니다. ('+(code||'알 수 없는 오류')+')';
+ }
+}
 </script>
 </body>
 </html>
